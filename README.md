@@ -24,5 +24,4 @@ Server sẽ chạy tại http://localhost:3000
 - Giao diện đơn giản, dễ sử dụng
 
 ## Project URL
-https://github.com/NguyenDucMinhKhoi/Unit-Converter 
 https://roadmap.sh/projects/unit-converter
