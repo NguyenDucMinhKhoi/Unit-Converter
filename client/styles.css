@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+body {
+    background: #fafbfc;
+    font-family: 'Indie Flower', cursive;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.panel {
+    background: #fff;
+    border: 3px solid #222;
+    border-radius: 10px;
+    padding: 2rem 2.5rem;
+    min-width: 350px;
+    min-height: 450px;
+    box-shadow: 2px 2px 0 #bbb;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.tabs {
+    display: flex;
+    gap: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.tab {
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    font-family: inherit;
+    cursor: pointer;
+    color: #222;
+    border-bottom: 2.5px solid transparent;
+    padding-bottom: 2px;
+    transition: border 0.2s, color 0.2s;
+}
+
+.tab.active {
+    color: #3b6eea;
+    border-bottom: 2.5px solid #3b6eea;
+}
+
+label {
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+    font-size: 1.1rem;
+}
+
+input[type="number"], input[type="text"] {
+    width: 100%;
+    padding: 0.5rem 0.7rem;
+    border: 2px solid #222;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-family: inherit;
+    margin-bottom: 0.5rem;
+    background: #fafbfc;
+}
+
+.convert-btn, .reset-btn {
+    margin-top: 1.2rem;
+    padding: 0.6rem 1.5rem;
+    font-size: 1.1rem;
+    font-family: inherit;
+    border: 2px solid #222;
+    border-radius: 6px;
+    background: #fff;
+    cursor: pointer;
+    box-shadow: 1px 1px 0 #bbb;
+    transition: background 0.2s;
+}
+
+.convert-btn:hover, .reset-btn:hover {
+    background: #f0f4ff;
+}
+
+.result-content {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+#result-value {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 1.2rem 0 1.5rem 0;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 900px) {
+    .main-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .panel {
+        min-width: 300px;
+        width: 90vw;
+    }
+} 

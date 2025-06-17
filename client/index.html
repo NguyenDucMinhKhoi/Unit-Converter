@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="panel" id="form-panel">
+            <h1>Unit Converter</h1>
+            <div class="tabs">
+                <button class="tab active" id="tab-length" onclick="selectType('length')">Length</button>
+                <button class="tab" id="tab-weight" onclick="selectType('weight')">Weight</button>
+                <button class="tab" id="tab-temperature" onclick="selectType('temperature')">Temperature</button>
+            </div>
+            <form id="convert-form" onsubmit="handleConvert(event)">
+                <label id="input-label" for="value">Enter the length to convert</label>
+                <input type="number" id="value" required>
+                <label for="fromUnit">Unit to Convert from</label>
+                <input type="text" id="fromUnit" list="fromUnitList" required>
+                <datalist id="fromUnitList"></datalist>
+                <label for="toUnit">Unit to Convert to</label>
+                <input type="text" id="toUnit" list="toUnitList" required>
+                <datalist id="toUnitList"></datalist>
+                <button type="submit" class="convert-btn">Convert</button>
+            </form>
+        </div>
+        <div class="panel" id="result-panel" style="display:none;">
+            <h1>Unit Converter</h1>
+            <div class="tabs">
+                <button class="tab active" id="tab-length-result" onclick="selectType('length')">Length</button>
+                <button class="tab" id="tab-weight-result" onclick="selectType('weight')">Weight</button>
+                <button class="tab" id="tab-temperature-result" onclick="selectType('temperature')">Temperature</button>
+            </div>
+            <div class="result-content">
+                <p>Result of your calculation</p>
+                <div id="result-value"></div>
+                <button onclick="resetForm()" class="reset-btn">Reset</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
